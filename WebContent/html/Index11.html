@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NST-GPS System</title>
+<link href="html/css/css.css" rel="stylesheet" type="text/css"/>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #06070D;
+}
+div.background {
+    background: url(html/images/texture.jpg) repeat left;
+    border: 1px solid black;
+}
+
+div.transbox {
+    margin: 18px;
+    border: 2px solid black;
+    opacity: 0.8;
+    filter: alpha(opacity=0); /* For IE8 and earlier */
+}
+</style>
+</head>
+
+<body class="top-navigation">
+<div  id="wrapper">
+
+<div class="navbar-fixed-top">
+    <div class="row">
+      <div class="col-xs-3 col-sm-3"> <a href="#" class="logo-img"><img src="img/logo.png" alt=""/></a></div>
+      <div class="col-xs-6 col-sm-6 text-center">
+        <div class="top-title"> VEHICLE TRACKING AND FLEET MANAGMENT SYSTEM</div>
+      </div>
+      <div class="col-xs-3 col-sm-3 text-right">
+        <div class="cust-logo"> <img src="images/cust-logo.jpg" alt=""/> <span>Customer Logo</span> </div>
+      </div>
+    </div>
+    <div class="row border-bottom white-bgx">
+      <div class="col-xs-12">
+        <nav class="navbar navbar-static-top" role="navigation">
+          <div class="navbar-header">
+            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <i class="fa fa-reorder"></i> </button> 
+          </div>
+          <div class="navbar-collapse collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              <li > <a aria-expanded="false" role="button" href="index.html">Live</a> </li>
+              <li > <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown">Vehicle Information<span class="caret"></span></a>
+                <ul  role="menu" class="dropdown-menu">
+                  <li ><a href="vehicle-view.html"><i class="fa fa-eye"></i> Vehicle View</a></li>
+                  <li ><a href="vehicle-map-view.html"><i class="fa fa-map-marker"></i> Vehicle Map View</a></li>
+                  <li ><a href="vihicle-information.html"><i class="fa fa-info-circle"></i> Vehicle information </a></li>
+                  <li><a href="#"><i class="fa fa-list"></i> Vehicle I/O List</a></li>
+                </ul>
+              </li>
+              <li> <a aria-expanded="false" role="button" href="reports.html">Reports</a> </li>
+              <li class="dropdown active"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown">Settings<span class="caret"></span></a>
+                <ul role="menu" class="dropdown-menu">
+                  <li ><a href="driver-scheduling.html"> <i class="fa fa-wheelchair"></i> Driver Scheduling </a></li>
+                  <li ><a href="vehicle-service.html"> <i class="fa fa-car"></i> Vehicle Service </a></li>
+                  <li><a href="#"> <i class="fa fa-th"></i> Geofency</a></li>
+                  <li><a href="fuel.html"> <i class="fa fa-bus"></i> Fuel </a></li>
+                  <li class="active"><a href="location-entry.html"> <i class="fa fa-location-arrow"></i> Location Entry </a></li>
+                  <li ><a href="route.html"> <i class="fa fa-random"></i> Route </a></li>
+                  <li><a href="route-schedule.html"> <i class="fa fa-line-chart"></i> Route Scheduling </a></li>
+                </ul>
+              </li>
+              <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown">Configuration<span class="caret"></span></a>
+                <ul role="menu" class="dropdown-menu">
+                  <li ><a href="vehicle-master.html"> <i class="fa fa-empire"></i> Vehicle Master</a></li>
+                  <li><a href="driver-details.html"> <i class="fa fa-pencil-square"></i> Driver Details</a></li>
+                  <li ><a href="vehicle-groups.html"> <i class="fa fa-taxi"></i> Vehicle Groups</a></li>
+                  <li ><a href="alert.html"> <i class="fa fa-certificate"></i> Alert</a></li>
+                  <li ><a href="user.html"> <i class="fa fa-user"></i> User</a></li>
+                  <li><a href="no-movement.html"> <i class="fa fa-dot-circle-o"></i> No Movement </a></li>
+                </ul>
+              </li>
+              <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown">School<span class="caret"></span></a>
+                <ul role="menu" class="dropdown-menu">
+                  <li><a href="student-entry.html"> <i class="fa fa-child"></i> Student Entry </a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-top-links navbar-right">
+              <li><span class="cust-name">Welcome to Customer Name</span></li>
+              <li> <a href="login.html"> <i class="fa fa-sign-out"></i> Log out </a> </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+<table id="maintable" "width="100%" height="98%" border="1" align="center"  cellpadding="0" cellspacing="0" class="altrowstable">
+  <tr>
+    <th height="23" colspan="4" align="left" valign="middle" bgcolor="#C4C5C5" scope="col"><table width="100%" border="0" cellspacing="0" cellpadding="0" >
+      <tbody>
+        <tr>
+          <th width="32" height="23" scope="col"><img src="html/images/Nst.png" width="100%" height="100%" /></th>
+          <th width="96" scope="col">NST</th>
+          <th width="1002" scope="col">Vehicle Tracking And Management System</th>
+          <th width="100" align="right" valign="middle"><a width=""href="Login.html" class="button">LogOut</a></th>
+        </tr>
+      </tbody>
+    </table></th>
+  </tr>
+  <tr>
+
+    <td width="16%" height="612" valign="top"><table width="100%" border="0" align="left" valign="top" cellpadding="1" cellspacing="0" >
+      <tr>
+        <td height="592" align="left" valign="middle" >
+        <table width="100%" border="0" align="left" valign="top" cellpadding="0" cellspacing="0" class="altrowstable" >
+          <tr>
+            <td height="20" align="left" valign="middle" bgcolor="#C4C5C5" class="leftMenu"><table width="100%" border="0" align="left" valign="top" cellpadding="0" cellspacing="0" class="altrowstable" >
+              <tr style="border: 1px solid #254b4b">
+                <th height="25" align="left" valign="middle"  bgcolor="#185e6b" class="leftmenu"><img src="html/images/vehicle.png" width="25" height="26" alt=""/></th>
+                <th height="25" align="center" valign="middle"  bgcolor="#185e6b" class="leftmenu"><strong>Vehicle Information</strong></th>
+              </tr>
+              <tr>
+                <td colspan="2" align="left" valign="left" bgcolor="#FFFFFF"><ul>
+                 <li  class="Li"> <a href="html/VehicleView.html" class="button" target="frame1"> Vehicle View </a></li>
+                <li class="Li"><span style="font-size: 12px"><a href="html/VehicleInfo_map_view.html"  class="button" target="frame1" > Vehicle Map View </a> </span></li>
+                <li  class="Li"> <span style="font-size: 12px"><a href="html/Vehicle_info_master_view.html"  class="button" target="frame1" > Vehicle information </a> </span></li> 
+                <li><a href="#"  class="button" target="frame1">Vehicle I/O List</a></li>
+                </ul></td>
+              </tr>
+              <tr style="border: 1px solid #254b4b">
+                <th height="25" colspan="2" align="center" valign="middle" class="leftmenu" bgcolor="#185e6b" ><b> Reports</b></th>
+              </tr>
+              <tr>
+                <th height="64" colspan="2" align="center" valign="middle"  style="background-color: #272626"class="leftmenu"><img src="html/images/report.jpg" width="50" height="51" alt=""/></th>
+              </tr>
+              <tr style="border: 1px solid #254b4b">
+                <th width="41" height="23" align="left" valign="middle" bgcolor="#185e6b" class="leftmenu" ><strong> <img src="html/images/setting1.png" width="25" height="26" alt=""/></strong></th>
+                <th width="128" valign="middle" align="center" valign="middle" class="leftmenu" bgcolor="#185e6b" ><strong> Settings</strong></th>
+              </tr>
+              <tr>
+                <td colspan="2" align="left" valign="top" bgcolor="#FFFFFF"><ul>
+                 <li class="Li"> <a href="html/driver_scheduling_view.html" class="button" target="frame1"> Driver Scheduling </a></li>
+                <li class="Li"> <a href="html/vehicle_service_master_view.html"  class="button" target="frame1"> Vehicle Service </a></li>
+                <li class="Li"><a href="#"  class="button" target="frame1">Geofency</a></li>
+                <li class="Li"> <a href="html/Fuel_interface_view.html"  class="button" target="frame1">Fuel </a></li>
+                <li class="Li"> <a href="html/location_master_view1.html" class="button"  target="frame1"> Location Entry </a> </li> 
+                  <li class="Li"> <a href="html/route_master_view.html"  class="button" target="frame1"> Route </a> </li>
+                  <li class="Li"> <a href="html/route_schedule_view.html"  class="button" target="frame1"> Route Scheduling </a></li>
+                </ul></td>
+              </tr>
+              <tr style="border: 1px solid #254b4b">
+                <td height="20" align="left" valign="middle"  bgcolor="#185e6b" class="leftmenu"><img src="html/images/Configuration.png" width="25" height="26" alt=""/></td>
+                <td height="28" valign="middle" align="center" valign="middle" class="leftmenu" bgcolor="#185e6b"><strong>Configuration</strong></td>
+              </tr>
+              <tr>
+                <td height="122" colspan="2" align="left" valign="top" bgcolor="#FFFFFF"><ul >
+                  <li class="Li"><a href="html/VehicleMasterView.html"  class="button" target="frame1"> Vehicle Master </a></li>
+                <li class="Li"> <a href="html/Driver_master_view.html"  class="button" target="frame1"> Driver Details </a></li>
+                <li class="Li"> <a href="html/group_master_view.html"  class="button" target="frame1">Vehicle Groups </a></li>
+                <li class="Li"><a href="html/alert_master_view.html"  class="button" target="frame1">Alert </a></li>
+                <li class="Li"> <a href="html/user_master_vew.html"  class="button" target="frame1"> User </a></li>
+                <li class="Li"> <a href="html/No_movements_view.html"  class="button" target="frame1"> No Movement </a></li>
+                </ul></td>
+              </tr>
+              <tr style="border: 1px solid #254b4b">
+                <td height="20" align="left" valign="middle"  bgcolor="#185e6b" class="leftmenu"><img src="html/images/school1.png" width="33" height="29" /></td>
+                <td height="20" align="center" valign="middle"  bgcolor="#185e6b" class="leftmenu"><strong>School </strong></td>
+              </tr>
+              <tr>
+                <td height="22" colspan="2" align="left" valign="top"align="center" valign="middle" style="color: #ffffff"><ul>
+                  <li> <a href="html/student_master_view.html"  class="button" target="frame1">  Student Entry </a> </li>
+                  <li> </li>
+                </ul></td>
+              </tr>
+            </table>             </td>
+          </tr>
+        </table></td>
+      </tr>
+    </table> </td>
+	  
+	  
+    <td width="84%" align="left" valign="top" bgcolor="#FFFFFF">
+
+    <iframe allowtransparency="true" style="width:100%;height:90%;background-image:url(html/images/Stripes.jpg)" name="frame1" width="99.99%" height="100%" frameborder="0" src="html/VehicleView.html"> </iframe>
+   
+    </td>
+  
+ 
+  </tr>
+  <tr>
+  <td height="20" colspan="2" valign="middle" bgcolor="#C4C5C5" >  <div width = "100%">
+   <div width="30%" class="divleft"> <input type="checkbox" name="Autoload" id="checkbox" class="style-checkbox"> <label for="checkbox"> Autoload  </label>
+     <select name="time" class="list" id="time">
+       <option>60</option>
+       <option>90</option>
+       <option>30</option>
+     </select>
+     <label>  Sec. </label>
+   </div>
+
+   <div class="button" > Copyrights @ 2016 Neha Software Technologies | All Rights Reserved  </div>
+  </div></td></tr>
+  
+</table>
+</div>
+</body>
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="Main_menu.js"></script>
+<script type="text/javascript" src="angular.min.js"></script>
+</html>

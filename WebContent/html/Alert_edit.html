@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from kalkisoft.com/adhata/html/new-vehicle.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Dec 2016 18:17:01 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NST GPS</title>
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+	<link href="css/bootstrap-timepicker.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+</head>
+
+<body class="top-navigation">
+    <div id="wrapper">
+        <div class="navbar-fixed-top">
+            <div class="row">
+                <div class="col-xs-3 col-sm-3">
+                    <a href="#" class="logo-img">
+                        <img src="img/logo.png" alt="" /></a>
+                </div>
+                <div class="col-xs-6 col-sm-6 text-center">
+                    <div class="top-title">VEHICLE TRACKING AND FLEET MANAGMENT SYSTEM</div>
+                </div>
+                <div class="col-xs-3 col-sm-3 text-right">
+                    <div class="cust-logo">
+                        <img src="images/cust-logo.jpg" alt="" />
+                        <span>Customer Logo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom white-bgx">
+                <div class="col-xs-12">
+                    <nav class="navbar navbar-static-top" role="navigation">
+                        <div class="navbar-header">
+                            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"><i class="fa fa-reorder"></i></button>
+                        </div>
+                        <div class="navbar-collapse collapse" id="navbar">
+					<ul class="nav navbar-nav">
+					  <li > <a aria-expanded="false" role="button" href="../index.html">Live</a> </li>
+					  <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle">Vehicle Information<span class="caret"></span></a>
+						<ul  role="menu" class="dropdown-menu">
+						  <li ><a href="VehicleView.html"><i class="fa fa-eye"></i> Vehicle View</a></li>
+						  <li ><a href="VehicleInfo_map_view.html"><i class="fa fa-thumb-tack"></i> Vehicle Map View</a></li>
+						  <li ><a href="Vehicle_master_view.html"><i class="fa fa-info-circle"></i> Vehicle information </a></li>
+						  <li><a href="#"><i class="fa fa-list-ul"></i> Vehicle I/O List</a></li>
+						</ul>
+					  </li>
+					  <li> <a aria-expanded="false" role="button" href="reports.html">Reports</a> </li>
+					  <li class="dropdown "> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Settings<span class="caret"></span></a>
+						<ul role="menu" class="dropdown-menu">
+						  <li ><a href="driver_scheduling_view.html"> <i class="fa fa-sitemap"></i> Driver Scheduling </a></li>
+						  <li ><a href="vehicle_service_master_view.html"> <i class="fa fa-car"></i> Vehicle Service </a></li>
+						  <li><a href="#"> <i class="fa fa-tencent-weibo"></i> Geofency</a></li>
+						  <li><a href="fuel.html"> <i class="fa fa-tint"></i> Fuel </a></li>
+						  <li><a href="location_master_entry.html"> <i class="fa fa-map-marker"></i> Location Entry </a></li>
+						  <li ><a href="Route.html"> <i class="fa fa-road"></i> Route </a></li>
+						  <li><a href="route_schedule_view.html"> <i class="fa fa-line-chart"></i> Route Scheduling </a></li>
+						</ul>
+					  </li>
+					  <li class="dropdown active"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Configuration<span class="caret"></span></a>
+						<ul role="menu" class="dropdown-menu">
+						  <li ><a href="Vehicle_master_view.html"> <i class="fa fa-car"></i> Vehicle Master</a></li>
+						  <li><a href="Driver_master_view.html"> <i class="fa fa-user"></i> Driver Details</a></li>
+						  <li ><a href="group_master_view.html"> <i class="fa fa-bus"></i> Vehicle Groups</a></li>
+						  <li class="active"><a href="alert_master_view.html"> <i class="fa fa-bell-o"></i> Alert</a></li>
+						  <li ><a href="user_master_vew.html"> <i class="fa fa-user"></i> User</a></li>
+						  <li><a href="No_movements_view.html"> <i class="fa fa-dot-circle-o"></i> No Movement </a></li>
+						</ul>
+					  </li>
+					  <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >School<span class="caret"></span></a>
+						<ul role="menu" class="dropdown-menu">
+						  <li><a href="student_master_view.html"> <i class="fa fa-child"></i> Student Entry </a></li>
+						</ul>
+					  </li>
+					</ul>
+					<ul class="nav navbar-top-links navbar-right">
+					  <li><span class="cust-name">Welcome to Customer Name</span></li>
+					  <li> <a href="login.html"> <i class="fa fa-sign-out"></i> Log out </a> </li>
+					</ul>
+				  </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+  <div id="page-wrapper2" class="gray-bg">
+    <div class="rowx wrapper border-bottom white-bg page-heading">
+      <div class="col-sm-12">
+        <h2>Edit Alart Entry </h2>
+      </div>
+    </div>
+    <div class="wrapper wrapper-content  animated fadeInRight">
+      <div class="ibox">
+        <div class="ibox-content">
+          <h3 class="m-t-none m-b">Alart Entry</h3>
+          <div class="row">
+            <form action="http://166.62.56.246:8080/TrackMeWeb/TrackMeServlet" method="post">
+              <div class="col-sm-12 ">
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <label>Select </label>
+                    <div class="radio i-checks">
+                      <label>
+                        <input type="radio" name="select"  value="vehicle" %isvehicle%>
+                        <i></i> &nbsp;&nbsp;Vehicle No </label>
+                      <label>
+                        <input type="radio" name="select" value="group" %isgroup%>
+                        <i></i> &nbsp;&nbsp;Group </label>
+                    </div>
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label>Vehicle No / Group Name</label>
+					<input name="vehicleNo" type="text" placeholder="Vehicle No / Group Name" class="form-control" id="textfield2" value="%vehicleNo%">
+                    <div class="clearfix"></div>
+                    <br>
+                   
+                  </div>
+				  
+                  <div class="form-group col-sm-6">
+                    <label>Snooze Time </label>
+                    <select class="form-control" name="snoozeTime" required id="snooztime">
+                      <option>10 pm to 10.30 Pm</option>
+                    </select>
+                  </div>
+				  <div class="form-group col-sm-6">
+					<label class="checkbox-inline i-checks"> Over Speed: </label>
+                        <input name="overSpeed" type="checkbox" class="i-checks" id="Checkbox1" value="true" %overSpeed% >&nbsp;&nbsp;
+                      
+					  <label class="checkbox-inline i-checks"> Sudden Break: </label>
+                        <input name="suddenBreak" type="checkbox" class="i-checks" id="Checkbox2" value="true" %suddenBreak%>&nbsp;&nbsp;
+                      
+                      <label class="checkbox-inline i-checks"> Idle Time: </label>
+                        <input type="checkbox" class="i-checks" name="idleTime" value="true" id="Checkbox3" %idleTime%>&nbsp;&nbsp;
+                      
+                      <label class="checkbox-inline i-checks"> Panic: </label>
+                        <input type="checkbox" class="i-checks" name="panic" value="true" id="Checkbox4" %panic%>&nbsp;&nbsp;
+                      
+                      <label class="checkbox-inline i-checks"> Geofence:  </label>
+                        <input type="checkbox" class="i-checks" name="geoFency" value="true" id="Checkbox5" %geoFency%>&nbsp;&nbsp;
+				  </div>
+                  <div class="form-group col-sm-6">
+                    <label>Alert By</label>
+                    <div class="clearfix"></div>
+                    <label class="checkbox-inline i-checks"> SMS: </label>
+                      <input name="bySms" type="checkbox" class="i-checks" id="SMSCheckbox" value="true" %alertBySMS%>&nbsp;&nbsp;
+                    
+                    <label class="checkbox-inline i-checks"> Mail: </label>
+                      <input type="checkbox" class="i-checks" name="byMail" value="true" id="mailCheckbox" %alertByMail%>&nbsp;&nbsp;
+                   
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="form-group col-sm-6">
+                    <label>Contact No</label>
+                    <input name="contactNo" type="text" placeholder="Contact No" id="SMSCheckbox" value="%contactNo%" class="form-control">
+                  </div>
+                </div>
+                <div class="col-sm-12 text-center ">
+					<input name="action" type="submit" class="btn  btn-primary" value="Save Alert">
+             <!--  <input name="button2" type="button" class="button" id="button2" value="Reset"> -->
+			  <input name="button3" type="button" class="btn  btn-danger" id="button3"  onClick="location.href = 'alert_master_view.html'" value="Close" >
+				</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-fixed">
+            <div class="auto-reloader-bar">
+                <div class="row">
+                    <div class="col-xs-6">
+                        
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <div class="copy-txt"><strong>Copyright</strong> Neha Software Technologies &copy; 2016 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="js/tether.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="js/buttons.flash.min.js"></script>
+<script type="text/javascript" src="js/jspdf.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="js/icheck.min.js"></script>
+    <!-- iCheck -->
+    <script>
+        
+        $('.i-checks').iCheck({
+            checkboxClass: 'icheckbox_square-green',
+            radioClass: 'iradio_square-green',
+        });
+    </script>
+</body>
+
+<!-- Mirrored from kalkisoft.com/adhata/html/new-vehicle.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Dec 2016 18:17:01 GMT -->
+</html>

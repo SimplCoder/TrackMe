@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jquery.ui.datepicker.min.css" rel="stylesheet" type="text/css">
+<script src="jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="jquery.ui-1.10.4.datepicker.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<table width="1133" border="0" cellspacing="1" cellpadding="2">
+  <tbody>
+    <tr>
+      <td width="123" height="26" align="left" valign="middle" scope="col">Vehicle No: </td>
+      <th width="166" align="left" valign="middle" scope="col"><input name="textfield" type="text" id="textfield" class="editor-field"  ></th>
+      <td width="130" valign="middle" scope="col"><label for="textfield2" class ="editor-label1" >Select Device :</label></td>
+      <th width="144" align="left" valign="middle" scope="col"><select name="select" id="select"class="editor-field1"  >
+        <option>AAA</option>
+        <option>BBB</option>
+      </select></th>
+      <th width="86" align="left" valign="middle" scope="col">&nbsp;</th>
+      <th width="144" align="left" valign="middle" scope="col">&nbsp;</th>
+      <th width="113" align="left" valign="middle" scope="col">&nbsp;</th>
+      <th width="170" align="left" valign="middle" scope="col">&nbsp;</th>
+    </tr>
+    <tr>
+      <td height="26">Vehicle Type:</td>
+      <td><input name="textfield3" type="text" id="textfield3" class="editor-field1" ></td>
+      <td><label for="textfield4" class ="editor-label1" >Make :</label></td>
+      <td><input type="text" name="textfield4" id="textfield4" class="editor-field2" ></td>
+      <td>serial_No:</td>
+      <td><input type="text" name="textfield5" id="textfield5" class="editor-field2" ></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td height="26"><label for="textfield5" class ="editor-label">Vehicle NP.:</label></td>
+      <td><input type="text" name="textfield2" id="textfield2" class="editor-field1"></td>
+      <td>NP. Exp. Dt</td>
+      <td><input type="text" id="Datepicker1" size="6" class="editor-field1"></td>
+      <td>Issued RTO.</td>
+      <td><input type="text" name="textfield6" id="textfield6"></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><label for="datetime" class ="editor-label">Insurance Date:</label></td>
+      <td><input type="text" id="Datepicker2"  size = "10"  ></td>
+      <td>Insurance No :</td>
+      <td><input type="text" name="textfield7" id="textfield7" class="editor-field1"></td>
+      <td>Insurnace By</td>
+      <td><input type="text" name="textfield8" id="textfield8"></td>
+      <td>Exp.Date:</td>
+      <td><input type="text" id="Datepicker3" size="6"></td>
+    </tr>
+    <tr>
+      <td><label for="textfield9" class ="editor-label">Odi. Meter:</label></td>
+      <td><input name="textfield9" type="text" class="editor-field1" id="textfield9" size="10"></td>
+      <td><label for="textfield10" class ="editor-label2">Current Fuel:</label></td>
+      <td><input type="text" name="textfield10" id="textfield10" class="editor-field1" ></td>
+      <td>Service(Km)</td>
+      <td><input type="text" name="textfield11" id="textfield11"></td>
+      <td>Service Dt.:</td>
+      <td><input type="text" id="Datepicker4" size="6"></td>
+    </tr>
+    <tr>
+      <td>Owner :</td>
+      <td><input type="text" name="textfield12" id="textfield12"></td>
+      <td>Contact  1 :</td>
+      <td><input type="text" name="textfield13" id="textfield13"></td>
+      <td>Contact  2:</td>
+      <td><input type="text" name="textfield14" id="textfield14"></td>
+      <td>Email:</td>
+      <td><input type="text" name="textfield15" id="textfield15"></td>
+    </tr>
+    <tr>
+      <td>Address:</td>
+      <td valign="middle"><textarea  name="textarea" maxlength="30" wrap="soft" id="textarea"> </textarea ></td>
+      <td>City:</td>
+      <td><input type="text" name="textfield16" id="textfield16"></td>
+      <td><label for="textfield17">Pin</label></td>
+      <td><input name="textfield17" type="text" id="textfield17" size="8"></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<script type="text/javascript">
+$(function() {
+	$( "#Datepicker1" ).datepicker({
+		dateFormat:"DD, MM, yy",
+		showOn:"both"
+	}); 
+});
+$(function() {
+	$( "#Datepicker2" ).datepicker({
+		showOn:"both"
+	}); 
+});
+$(function() {
+	$( "#Datepicker3" ).datepicker({
+		showOn:"both"
+	}); 
+});
+$(function() {
+	$( "#Datepicker4" ).datepicker({
+		showOn:"both"
+	}); 
+});
+</script>
+</body>
+</html>

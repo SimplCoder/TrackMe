@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NST GPS</title>
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/bootstrap-timepicker.css" rel="stylesheet">
+    <link href="css/datepicker3.css" rel="stylesheet">
+    <style type="text/css">
+        #mapCanvas1 {
+            width: 100%;
+            height: 500px;
+        }
+
+        input#addlocation {
+            margin-top: 21px;
+        }
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQTpXj82d8UpCi97wzo_nKXL7nYrd4G70"></script>
+    <script type="text/javascript">
+        var geocoder = new google.maps.Geocoder();
+
+        function geocodePosition(pos) {
+            geocoder.geocode({
+                latLng: pos
+            }, function (responses) {
+                if (responses && responses.length > 0) {
+                    updateMarkerAddress(responses[0].formatted_address);
+                } else {
+                    updateMarkerAddress('Cannot determine address at this location.');
+                }
+            });
+        }
+
+        function updateMarkerPosition(latLng) {
+            document.getElementById('Latitxt').value = [latLng.lat()];
+            document.getElementById('Longtxt').value = [latLng.lng()];
+        }
+        function updateMarkerAddress(str) {
+            document.getElementById('address').innerHTML = str;
+            document.getElementById('address').value = str
+        }
+        function initialize() {
+            var latLng = new google.maps.LatLng(18.5314, 73.8626);
+            var map = new google.maps.Map(document.getElementById('mapCanvas1'), {
+                zoom: 10,
+                center: latLng,
+                mapTypeId: google.maps.MapTypeId.roadmap
+            });
+            var marker = new google.maps.Marker({
+                position: latLng,
+                title: 'Point A',
+                map: map,
+                draggable: true
+            });
+
+            // Update current position info.
+            updateMarkerPosition(latLng);
+            geocodePosition(latLng);
+
+            // Add dragging event listeners.
+
+            google.maps.event.addListener(marker, 'drag', function () {
+                updateMarkerPosition(marker.getPosition());
+
+            });
+
+            google.maps.event.addListener(marker, 'dragend', function () {
+
+                geocodePosition(marker.getPosition());
+                updateMarkerAddress('Dragging...');
+            });
+        }
+
+        // Onload handler to fire off the app.
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+</head>
+<body class="top-navigation">
+    <div id="wrapper">
+        <div class="navbar-fixed-top">
+            <div class="row">
+                <div class="col-xs-3 col-sm-3">
+                    <a href="#" class="logo-img">
+                        <img src="img/logo.png" alt="" /></a>
+                </div>
+                <div class="col-xs-6 col-sm-6 text-center">
+                    <div class="top-title">VEHICLE TRACKING AND FLEET MANAGMENT SYSTEM</div>
+                </div>
+                <div class="col-xs-3 col-sm-3 text-right">
+                    <div class="cust-logo">
+                        <img src="images/cust-logo.jpg" alt="" />
+                        <span>Customer Logo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom white-bgx">
+                <div class="col-xs-12">
+                    <nav class="navbar navbar-static-top" role="navigation">
+                        <div class="navbar-header">
+                            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"><i class="fa fa-reorder"></i></button>
+                        </div>
+                        <div class="navbar-collapse collapse" id="navbar">
+					<ul class="nav navbar-nav">
+					  <li > <a aria-expanded="false" role="button" href="../index.html">Live</a> </li>
+					  <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle">Vehicle Information<span class="caret"></span></a>
+						<ul  role="menu" class="dropdown-menu">
+						  <li ><a href="VehicleView.html"><i class="fa fa-eye"></i> Vehicle View</a></li>
+						  <li ><a href="VehicleInfo_map_view.html"><i class="fa fa-thumb-tack"></i> Vehicle Map View</a></li>
+						  <li ><a href="Vehicle_master_view.html"><i class="fa fa-info-circle"></i> Vehicle information </a></li>
+						  <li><a href="#"><i class="fa fa-list-ul"></i> Vehicle I/O List</a></li>
+						</ul>
+					  </li>
+					  <li> <a aria-expanded="false" role="button" href="reports.html">Reports</a> </li>
+					  <li class="dropdown active"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Settings<span class="caret"></span></a>
+						<ul role="menu" class="dropdown-menu">
+						  <li ><a href="driver_scheduling_view.html"> <i class="fa fa-sitemap"></i> Driver Scheduling </a></li>
+						  <li><a href="vehicle_service_master_view.html"> <i class="fa fa-car"></i> Vehicle Service </a></li>
+						  <li><a href="#"> <i class="fa fa-tencent-weibo"></i> Geofency</a></li>
+						  <li><a href="fuel.html"> <i class="fa fa-tint"></i> Fuel </a></li>
+						  <li class="active"><a href="location_master_entry.html"> <i class="fa fa-map-marker"></i> Location Entry </a></li>
+						  <li ><a href="Route.html"> <i class="fa fa-road"></i> Route </a></li>
+						  <li><a href="route_schedule_view.html"> <i class="fa fa-line-chart"></i> Route Scheduling </a></li>
+						</ul>
+					  </li>
+					  <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Configuration<span class="caret"></span></a>
+						<ul role="menu" class="dropdown-menu">
+						  <li ><a href="Vehicle_master_view.html"> <i class="fa fa-car"></i> Vehicle Master</a></li>
+						  <li><a href="Driver_master_view.html"> <i class="fa fa-user"></i> Driver Details</a></li>
+						  <li><a href="group_master_view.html"> <i class="fa fa-bus"></i> Vehicle Groups</a></li>
+						  <li ><a href="alert_master_view.html"> <i class="fa fa-bell-o"></i> Alert</a></li>
+						  <li ><a href="user_master_vew.html"> <i class="fa fa-user"></i> User</a></li>
+						  <li><a href="No_movements_view.html"> <i class="fa fa-dot-circle-o"></i> No Movement </a></li>
+						</ul>
+					  </li>
+					  <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >School<span class="caret"></span></a>
+						<ul role="menu" class="dropdown-menu">
+						  <li><a href="student_master_view.html"> <i class="fa fa-child"></i> Student Entry </a></li>
+						</ul>
+					  </li>
+					</ul>
+					<ul class="nav navbar-top-links navbar-right">
+					  <li><span class="cust-name">Welcome to Customer Name</span></li>
+					  <li> <a href="login.html"> <i class="fa fa-sign-out"></i> Log out </a> </li>
+					</ul>
+				  </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <form action="http://166.62.56.246:8080/TrackMeWeb/TrackMeServlet" method="post">
+            <div id="page-wrapper2" class="gray-bg">
+                <div class="rowx wrapper border-bottom white-bg page-heading">
+                    <div class="col-sm-12">
+                        <h2>Add Location</h2>
+                    </div>
+                </div>
+                <div class="wrapper wrapper-content  animated fadeInRight">
+                    <div class="ibox-content">
+                        <h3 class="m-t-none m-b">Location</h3>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Name of Location</label>
+                                    <input type="text" id="locationName" name="locationname" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <input type="text" id="Desc" name="locationdescription" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Latitude</label>
+                                    <input type="text" id="Latitxt" name="latitude" readonly class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Longitude</label>
+                                    <input type="text" id="Longtxt" name="longitude" readonly class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Radius at Location(in mts)</label>
+                                    <input type="text" id="redius" name="radiuslocation" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Refer Radius(in mts)</label>
+                                    <input type="text" id="refer_redius" name="radiusreferlocation" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Closest matching address</label>
+                                    <input type="text" id="address" name="address" readonly class="form-control" />
+                                </div>
+                                <p>Note : Please click and drag the marker for Latitude/Longitude</p>
+                                <input name="action" type="submit" style="align: center" class="btn btn-primary" id="button" value="Add Location" />
+
+                                <input type="button" class="btn btn-danger" id="button3" value="Close" onclick="location.href = 'location_master_view1.html'" />
+
+                            </div>
+                            <div class="col-sm-6">
+                                <div id="mapCanvas1" class="mapCanvas1"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <div class="foot-fixed">
+        <div class="auto-reloader-bar">
+            <div class="row">
+                <div class="col-xs-6">
+                </div>
+                <div class="col-xs-6 text-right">
+                    <div class="copy-txt"><strong>Copyright</strong> Neha Software Technologies &copy; 2016 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/tether.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/bootstrap-timepicker.js"></script>
+    <script type="text/javascript" src="js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="js/buttons.flash.min.js"></script>
+    <script type="text/javascript" src="js/jspdf.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="js/icheck.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#entrydata').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                            'copyHtml5',
+                            'excelHtml5',
+                            'csvHtml5',
+                            'pdfHtml5'
+                ]
+            });
+            if ($("input[type='search']").length > 0) {
+                $("input[type='search']").addClass("form-control");
+            }
+            if ($("select[name='entrydata_length']").length > 0) {
+                $("select[name='entrydata_length']").addClass("form-control");
+            }
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+            $('#startDate').datepicker({
+                autoclose: true,
+                height: 650
+
+            });
+            $('#endDate').datepicker({
+                autoclose: true
+            });
+            $(".timepicker").timepicker({
+                showInputs: false
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!doctype html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <title>Untitled Document</title>
+            <link href="css/css.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+                body {
+                    margin-left: 0px;
+                    margin-top: 0px;
+                    margin-right: 0px;
+                    margin-bottom: 0px;
+                }
+
+        #mapCanvas1 {
+            width: 73%;
+            height: 100%;
+            float: right;
+        }
+
+        #infoPanel {
+            float: left;
+            width: 26%;
+            height: 100%;
+            margin-left: 3px;
+            margin-top: 3px;
+        }
+        </style>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+        var geocoder = new google.maps.Geocoder();
+
+        function geocodePosition(pos) {
+            geocoder.geocode({
+                latLng: pos
+            }, function (responses) {
+                if (responses && responses.length > 0) {
+                    updateMarkerAddress(responses[0].formatted_address);
+                } else {
+                    updateMarkerAddress('Cannot determine address at this location.');
+                }
+            });
+        }
+
+        function updateMarkerPosition(latLng) {
+            document.getElementById('Latitxt').value = [latLng.lat()];
+            document.getElementById('Longtxt').value = [latLng.lng()];
+        }
+        function updateMarkerAddress(str) {
+            document.getElementById('address').innerHTML = str;
+            document.getElementById('address').value = str
+        }
+        function initialize() {
+            var latLng = new google.maps.LatLng(18.5314, 73.8626);
+            var map = new google.maps.Map(document.getElementById('mapCanvas1'), {
+                zoom: 10,
+                center: latLng,
+                mapTypeId: google.maps.MapTypeId.HYBRID
+            });
+            var marker = new google.maps.Marker({
+                position: latLng,
+                title: 'Point A',
+                map: map,
+                draggable: true
+            });
+
+            // Update current position info.
+            updateMarkerPosition(latLng);
+            geocodePosition(latLng);
+
+            // Add dragging event listeners.
+
+            google.maps.event.addListener(marker, 'drag', function () {
+                updateMarkerPosition(marker.getPosition());
+
+            });
+
+            google.maps.event.addListener(marker, 'dragend', function () {
+
+                geocodePosition(marker.getPosition());
+                updateMarkerAddress('Dragging...');
+            });
+        }
+
+        // Onload handler to fire off the app.
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    </head>
+    <body>
+        <form action="http://166.62.56.246:8080/TrackMeWeb/TrackMeServlet" method="post">
+            <table width="100%" height="100%" valign="top" border="0" align="left" cellpadding="0" cellspacing="0" class="altrowstable">
+                <tbody>
+
+                    <tr>
+                        <td width="100%" height="99%" align="left" valign="top" bgcolor="#FFFFFF">
+
+                            <table width="100%" border="1" align="left" cellpadding="5" cellspacing="0">
+                                <tbody>
+
+                                    <tr>
+                                        <th height="800" colspan="3" align="left" valign="top">
+                                            <div id="mapCanvas1" class="mapCanvas1"></div>
+                                            <div id="infoPanel">
+                                                <label><b>Name of Location:</b></label>
+                                                <input type="text" id="locationName" name="locationname">
+                                                <p>
+                                                    <label><b>Description:</b></label></br>
+	                   <input type="text" id="Desc" name="locationdescription">
+                                                </p>
+                                                <p>
+                                                    <label><b>Latitude: </b></label>
+                                                    </br>
+	                   <input type="text" id="Latitxt" name="latitude" readonly>
+                                                </p>
+                                                <p>
+                                                    <label><b>Longitude: </b></label>
+                                                    </br>
+	                   <input type="text" id="Longtxt" name="longitude" readonly>
+                                                </p>
+                                                <p>
+                                                    <label><b>Radius at Location(in mts):</b></label>
+                                                    <input type="text" id="redius" name="radiuslocation">
+                                                </p>
+                                                <p>
+                                                    <label><b>Refer Radius(in mts):</b></label>
+                                                    <input type="text" id="refer_redius" name="radiusreferlocation">
+                                                </p>
+                                                <p><b>Closest matching address:</b></p>
+                                                <input type="text" id="address" name="address" readonly>
+
+                                                <p>
+                                                    <label style="color: #CC1B1E;"><b>Note : Please click and drag the marker for Latitude/Longitude</b></label>
+                                                </p>
+                                                </br>
+	                 
+                 <input name="action" type="submit" style="align: center" class="button" id="button" value="Add Location">
+
+                                                <input type="button" class="button" id="button3" value="Close" onclick="location.href = 'location_master_show.html'">
+                                            </div>
+                                        </th>
+                                    </tr>
+        </form>
+        </tbody>
+        </table></td>
+   
+    </tr>
+  <tbody>
+        </table>
+</form>
+    </body>
+</html>
+-->

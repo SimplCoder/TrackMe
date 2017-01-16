@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+form#form input#input-1, form#form input#input-2 {
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+	background-color: #eaeaea;
+background: -moz-linear-gradient(top, #ffffff, #eaeaea);
+    	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, 			#ffffff), color-stop(1.0, #eaeaea));
+    	border: 1px solid #cacaca;
+    	color: #444;
+    	font-size: 1.4em;
+    	margin: 0 0 25px;
+    	padding: 8px 10px;
+    	width: 240px;
+}
+form#form input#submit {
+-moz-border-radius: 32px;
+    	-webkit-border-radius: 32px;
+    	background-color: #dedede;
+    	background: -moz-linear-gradient(top, #ffffff, #eaeaea);
+    	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, 			#ffffff), color-stop(1.0, #dedede));
+    	border: 1px solid #dedede;
+    	color: #484848;
+    	font-size: 1.25em;
+    	font-weight: bold;
+   	padding: 10px 15px;
+}
+
+input:focus, textarea:focus {
+    -webkit-box-shadow:0 0 25px #ccc;
+    -moz-box-shadow:0 0 25px #ccc;
+    box-shadow:0 0 25px #ccc;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+input, textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color:#fff;
+    border:1px solid #ccc;
+    font-size:20px;
+    width:100px;
+    min-height:20px;
+    display:block;
+    margin-bottom:16px;
+    margin-top:8px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+

@@ -1,0 +1,385 @@
+@charset "utf-8";
+/* CSS Document */
+<style type="text/css">
+body {
+	width: 100%;
+	margin-left: 0px;
+	margin-top:  0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	position: fixed; 
+    overflow-y: scroll;
+	overflow-style:auto; 
+  	background-color: grey;
+	
+}
+.Heading {
+	font-size: 13px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bolder;
+	text-align: center;
+}
+.leftMenu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+    color: #1b110b; 
+    text-align: center;
+    border-style:thin;
+    background-color: #D9E4E6;
+    border-color: #F2EFEF;
+}
+
+
+table.altrowstable {
+    border-width: 2px;
+	padding: 1px;
+    border-color: #F2EFEF;
+	border-style:thin;
+    border-collapse: collapse;
+}
+
+table.altrowstable td {
+    border-width: 1px;
+    padding: 0px;
+    border-style:thin;
+    border-color: #400040;
+    
+	
+}
+table.altrowstable th {
+    border-width: 1px;
+    padding: 2px;
+    border-style:thin;
+    border-color: #000040;
+    font-weight: bold;
+}
+.blue-color {
+	background-color: black !important;
+	
+}
+.divmain {
+    display: inline;
+}
+ 
+ .divleft {
+     float:left ;
+	 display: inline;
+	 width:30%;
+}
+.divright {
+     float:right ;
+	 display: inline;
+}
+
+
+.entrytable {
+       
+	border-collapse: collapse;
+	border-width: 0px;
+    border-style:thin;
+    border-color: #F2EFEF;
+	background-color: #eaead1;
+	border-style:thin;
+		
+ }
+
+th {
+    border-width: 1px;
+    padding: 2px;
+    border-style:thin;
+    border-color: #F2EFEF;
+    font-weight: 600;
+    background-color: #012b72;
+}
+
+.boxtable {
+        border-style:none ;
+		boder-width:3px ;
+		border-color:#F2EFEF; 
+		border:thin ; 
+		
+	  
+		 
+ }
+ 
+ 
+.oddrowcolor{
+	background-color:#d4e3e5;
+}
+.evenrowcolor{
+	background-color:#c3dde0;
+	border-width: 2px;
+	padding: 1px;
+    border-color: #F2EFEF;
+	border-style:thin;
+	
+}
+
+	
+form {
+  font: 12px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  
+ 
+}
+
+a {
+    text-decoration: none;
+	color:#c0c0c0;}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+	display:block;
+    width:180px;
+    text-decoration: none;
+    color: #f3eeee;
+    align:left;
+    background: #272626;
+}
+
+ul {
+	list-style-type: button;
+    margin-left:0px;
+	font: 13px/1.3 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:#333333;
+	appearance:button;
+	display: block;
+    list-style-type: none;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+	}
+	
+
+li {
+	display: block;
+    text-align: left;
+	
+	}	 
+	 
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+
+.select_box{
+	width: 150px;
+	height: 20px;
+	box-sizing:border-box;
+	
+	}
+
+
+label1 {
+    display: inline-block;
+    font-size:small;
+    margin-left:5px;
+    width:8%;
+    min-width:60px;
+}
+
+
+.editor-label {
+    width: 108px;
+	display: inline;
+	text-align: left;
+	vertical-align: middle;
+	margin: 2px;
+	font: 14px/1.5  "Times New Roman",Helvetica Neue, Helvetica, Arial, sans-serif;
+	display: block;
+	float: left;
+	overflow: hidden;
+}
+.editor-field {
+	
+    width: 125px;
+    display: inline;
+	vertical-align: right;
+	background: #FFC ;
+	
+	
+}
+
+.editor-field_1 {
+	
+    width: 155px;
+	height:18px;
+    display: inline;
+	vertical-align: right;
+	font: 14px/1.7 "Calibri (Body)" Helvetica Neue, Helvetica, Arial, sans-serif;
+	background: #FFC ;
+}
+.alart-label {
+    width: 105px;
+	display: inline;
+	text-align: left;
+	vertical-align: middle;
+	margin: 2px;
+	font: 14px/1.6 "Helvetica Neue" Helvetica Neue, Helvetica, Arial, sans-serif;
+	display: block;
+	float: left;
+}
+.user-label {
+    width: 113px;
+	display: inline;
+	text-align: left;
+	vertical-align: middle;
+	margin: 1;
+    margin-left: 1%;
+	font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: block;
+	float: left;
+}
+.alart-label_1 {
+    width: 160px;
+	display: inline;
+	text-align: left;
+	vertical-align: middle;
+	margin: 1;
+	font: 14px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: block;
+	float: left;
+}
+
+.alart-label_2 {
+    width: 152px;
+	display: inline;
+	text-align: left;
+	vertical-align: middle;
+	margin-left:5px ;
+	font: 14px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: block;
+	float: left;
+	
+}
+.alart-label_3 {
+    width: 133px;
+	display: inline;
+	text-align: left;
+	vertical-align: middle;
+	margin-left:5px ;
+	font: 14px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: block;
+	float: left;
+	
+}
+
+.style-checkbox {
+style="text-align:center; vertical-align: middle;
+
+}
+
+input[type=text] {
+    padding:3px; 
+    border:1px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 4px;
+}
+
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #647171;
+  border: none;
+  color:#d2d2d2 ;
+  text-align: center;
+  font-size: 13px;
+  align:left;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 6px;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius:5px;
+  font-weight: bolder;
+}
+
+.button_location {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f1f1f1 ;
+  border: none;
+  color:#0F0F0F ;
+  text-align: center;
+  font-size: 13px;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 4px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+  border-radius:8px;
+  
+}
+
+
+.blink {
+  background-color:#990000;
+  border-radius:5px;
+  }
+
+
+.button:hover  {
+ color: #f74064;
+}
+
+
+.buttonsmall {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #F30   ;
+  border: none;
+  color:#0F0F0F ;
+  text-align: center;
+  font-size: 13px;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 2px;
+  width: 40px;
+  height: 21px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+  border-radius:2px;
+}
+
+.buttonsmall:hover  {
+  padding-right: 5px;
+}
+input[type=text]:focus {
+    border-color:#333; 
+}
+
+#mapCanvas {
+    width: 100%;
+    height: 100%;
+    float: left;
+	
+  }
+
+.list{
+	
+	background: #CCC ;
+	border-style:groove ;
+	box-sizing:border-box;
+	appearance: combo-box;
+	border-color: #69F;
+	size:10px ;
+	border-radius: 5px; 
+	
+	
+	}
+	
+.sub-heading {
+	background: #FFC ;
+	border-radius: 5px;	
+	}
+	
+td-left-margin {
+	margin-left:2px ;
+	  
+	 
+	}	
+</style>

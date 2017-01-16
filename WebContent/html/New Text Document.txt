@@ -1,0 +1,15 @@
+Driver Scheduling
+Vehicle Service
+Geofency
+Fuel 
+Location Entry
+Route 
+Route Scheduling
+Vehicle Maintnce 
+
+Vehicle Master
+Driver Details
+Vehicle Groups
+Alart
+User 
+

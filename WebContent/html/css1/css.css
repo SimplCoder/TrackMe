@@ -1,0 +1,268 @@
+@charset "utf-8";
+/* CSS Document */
+<style type="text/css">
+body {
+	width: 100%;
+	margin-left: 0px;
+	margin-top:  0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	position: fixed; 
+    overflow-y: scroll;
+	overflow-style:auto; 
+  	
+	
+}
+.Heading {
+	font-size: 13px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bolder;
+}
+.leftMenu {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+        color:#333333; 
+}
+
+
+table.altrowstable {
+    border-width: 2px;
+	padding: 1px;
+    border-color: #000040;
+	border-style:thin;
+    border-collapse: collapse;
+}
+
+table.altrowstable td {
+    border-width: 2px;
+    padding: 0px;
+    border-style:thin;
+    border-color: #000040;
+    align:center;
+    valign:middle;
+    text-align: center;
+	
+}
+table.altrowstable th {
+    border-width: 2px;
+    padding: 2px;
+    border-style:thin;
+    border-color: #000040;
+}
+.blue-color {
+	background-color: black !important;
+	
+}
+.divmain {
+    display: inline;
+}
+ 
+ .divleft {
+     float:left ;
+	 display: inline;
+}
+.divright {
+     float:right ;
+	 display: inline;
+}
+
+
+.entrytable {
+       
+		border:.1px thin #F2EFEF;     
+	    background-color:#FFFFFF;
+		border-collapse: collapse;
+ }
+
+.boxtable {
+        border-style:none ;
+		boder-width:3px ;
+		border-color:#F2EFEF; 
+		border:thin ; 
+		
+	  
+		 
+ }
+ 
+ 
+.oddrowcolor{
+	background-color:#d4e3e5;
+}
+.evenrowcolor{
+	background-color:#c3dde0;
+	border-width: 2px;
+	padding: 1px;
+    border-color: #F2EFEF;
+	border-style:thin;
+	
+}
+
+	
+form {
+  font: 12px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  
+ 
+}
+
+a {
+    text-decoration: none;
+	color:#333333;}
+
+ul {list-style-type: none;
+    margin-left:0px;
+	font: 13px/1.3 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color:#333333;
+	}
+	 
+.Li:hover, .li:focus {
+     text-decoration: inherit}
+	 
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+
+.select_box{
+	width: 150px;
+	height: 20px;
+	box-sizing:border-box;
+	
+	}
+
+
+label1 {
+    display: inline-block;
+    font-size:small;
+    margin-left:5px;
+    width:8%;
+    min-width:60px;
+}
+
+
+.editor-label {
+    width: 108px;
+	display: inline;
+	text-align: left;
+	vertical-align: middle;
+	margin: 1;
+	font: 12px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: block;
+	float: left;
+}
+.editor-field {
+	
+    width: 125px;
+    display: inline;
+	vertical-align: right;
+	
+}
+.alart-label {
+    width: 105px;
+	display: inline;
+	text-align: left;
+	vertical-align: middle;
+	margin: 1;
+	font: 12px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: block;
+	float: left;
+}
+.user-label {
+    width: 113px;
+	display: inline;
+	text-align: left;
+	vertical-align: middle;
+	margin: 1;
+    margin-left: 1%;
+	font: 12px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: block;
+	float: left;
+}
+.alart-label_1 {
+    width: 160px;
+	display: inline;
+	text-align: left;
+	vertical-align: middle;
+	margin: 1;
+	font: 12px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	display: block;
+	float: left;
+}
+.style-checkbox {
+style="text-align:center; vertical-align: middle;
+
+}
+
+input[type=text] {
+    padding:2px; 
+    border:1px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 4px;
+}
+
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f1f1f1 ;
+  border: none;
+  color:#0F0F0F ;
+  text-align: center;
+  font-size: 13px;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 6px;
+  width: 60px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+  border-radius:5px;
+}
+
+.button_location {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f1f1f1 ;
+  border: none;
+  color:#0F0F0F ;
+  text-align: center;
+  font-size: 13px;
+  font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 4px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 3px;
+  border-radius:8px;
+  
+}
+
+
+.blink {
+  background-color:#990000;
+  border-radius:5px;
+  }
+
+
+.button:hover  {
+  padding-right: 10px;
+}
+
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+#mapCanvas {
+    width: 100%;
+    height: 100%;
+    float: left;
+	
+  }
+
+test1{    width: 125px; 
+	display: inline;
+	margin-left: 2%;
+    margin-right: 5%;
+
+
+</style>

@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Service View</title>
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="css/buttons.dataTables.min.css" rel="stylesheet">
+    <style type="text/css">
+        #mapCanvas {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD5S4p1X2ItBi2COzuPMC1NQbopFWmESAE"></script>
+    <script type="text/javascript">
+        var geocoder = new google.maps.Geocoder();
+
+        function geocodePosition(pos) {
+            geocoder.geocode({
+                latLng: pos
+            });
+        }
+
+        function initialize() {
+            var latLng = new google.maps.LatLng(18.521, 73.860);
+            var map = new google.maps.Map(document.getElementById('mapCanvas'), {
+                zoom: 10,
+                center: latLng,
+                mapTypeId: google.maps.MapTypeId.roadmap
+            });
+            var marker = new google.maps.Marker({
+                position: latLng,
+                title: 'Point A',
+                map: map,
+                draggable: false
+            });
+
+            // Update current position info.
+            updateMarkerPosition(latLng);
+            geocodePosition(latLng);
+
+        }
+
+        // Onload handler to fire off the app.
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
+<body class="top-navigation">
+    <div id="wrapper">
+        <div class="navbar-fixed-top">
+            <div class="row">
+                <div class="col-xs-3 col-sm-3">
+                    <a href="#" class="logo-img">
+                        <img src="img/logo.png" alt="" /></a>
+                </div>
+                <div class="col-xs-6 col-sm-6 text-center">
+                    <div class="top-title">VEHICLE TRACKING AND FLEET MANAGMENT SYSTEM</div>
+                </div>
+                <div class="col-xs-3 col-sm-3 text-right">
+                    <div class="cust-logo">
+                        <img src="images/cust-logo.jpg" alt="" />
+                        <span>Customer Logo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom white-bgx">
+                <div class="col-xs-12">
+                    <nav class="navbar navbar-static-top" role="navigation">
+				  <div class="navbar-header">
+					<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"> <i class="fa fa-reorder"></i> </button> 
+				  </div>
+				  <div class="navbar-collapse collapse" id="navbar">
+					<ul class="nav navbar-nav">
+					  <li > <a aria-expanded="false" role="button" href="../index.html">Live</a> </li>
+					  <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle">Vehicle Information<span class="caret"></span></a>
+						<ul  role="menu" class="dropdown-menu">
+						  <li ><a href="VehicleView.html"><i class="fa fa-eye"></i> Vehicle View</a></li>
+						  <li ><a href="VehicleInfo_map_view.html"><i class="fa fa-thumb-tack"></i> Vehicle Map View</a></li>
+						  <li ><a href="Vehicle_master_view.html"><i class="fa fa-info-circle"></i> Vehicle information </a></li>
+						  <li><a href="#"><i class="fa fa-list-ul"></i> Vehicle I/O List</a></li>
+						</ul>
+					  </li>
+					  <li> <a aria-expanded="false" role="button" href="reports.html">Reports</a> </li>
+					  <li class="dropdown active"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Settings<span class="caret"></span></a>
+						<ul role="menu" class="dropdown-menu">
+						  <li ><a href="driver_scheduling_view.html"> <i class="fa fa-sitemap"></i> Driver Scheduling </a></li>
+						  <li><a href="vehicle_service_master_view.html"> <i class="fa fa-car"></i> Vehicle Service </a></li>
+						  <li><a href="#"> <i class="fa fa-tencent-weibo"></i> Geofency</a></li>
+						  <li><a href="fuel.html"> <i class="fa fa-tint"></i> Fuel </a></li>
+						  <li  class="active"><a href="location_master_entry.html"> <i class="fa fa-map-marker"></i> Location Entry </a></li>
+						  <li ><a href="Route.html"> <i class="fa fa-road"></i> Route </a></li>
+						  <li><a href="route_schedule_view.html"> <i class="fa fa-line-chart"></i> Route Scheduling </a></li>
+						</ul>
+					  </li>
+					  <li class="dropdown "> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Configuration<span class="caret"></span></a>
+						<ul role="menu" class="dropdown-menu">
+						  <li ><a href="Vehicle_master_view.html"> <i class="fa fa-car"></i> Vehicle Master</a></li>
+						  <li><a href="Driver_master_view.html"> <i class="fa fa-user"></i> Driver Details</a></li>
+						  <li><a href="group_master_view.html"> <i class="fa fa-bus"></i> Vehicle Groups</a></li>
+						  <li ><a href="alert_master_view.html"> <i class="fa fa-bell-o"></i> Alert</a></li>
+						  <li ><a href="user_master_vew.html"> <i class="fa fa-user"></i> User</a></li>
+						  <li><a href="No_movements_view.html"> <i class="fa fa-dot-circle-o"></i> No Movement </a></li>
+						</ul>
+					  </li>
+					  <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >School<span class="caret"></span></a>
+						<ul role="menu" class="dropdown-menu">
+						  <li><a href="student_master_view.html"> <i class="fa fa-child"></i> Student Entry </a></li>
+						</ul>
+					  </li>
+					</ul>
+					<ul class="nav navbar-top-links navbar-right">
+					  <li><span class="cust-name">Welcome to Customer Name</span></li>
+					  <li> <a href="login.html"> <i class="fa fa-sign-out"></i> Log out </a> </li>
+					</ul>
+				  </div>
+				</nav>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-wrapper2" class="gray-bg">
+            <div class="rowx wrapper border-bottom white-bg page-heading">
+                <div class="col-sm-12">
+                    <h2>Location View</h2>
+                </div>
+            </div>
+
+            <div class="wrapper wrapper-content  animated fadeInRight">
+			  <div class="ibox">
+				<div class="ibox-content">
+				  <div class="row">
+                <div class="text-center">
+                    <input name="button" type="button" class="btn btn-primary" id="button" value="Add Location" onclick="location.href = 'location_master_entry.html'" />
+                    <input name="button2" type="button" class="btn btn-success" id="button2" value="Show Location" onclick="location.href = 'location_master_show.html'" />
+                    <input name="button3" type="button" class="btn btn-default" id="button3" value="Manage Location" onclick="location.href = 'location_manage_entry.html'" />
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <h5>Map</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div id="mapCanvas" class="mapCanvas"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			</div>
+			</div>
+            </div>
+        </div>
+
+        <div class="foot-fixed">
+            <div class="auto-reloader-bar">
+                <div class="row">
+                    <div class="col-xs-6">
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <div class="copy-txt"><strong>Copyright</strong> Neha Software Technologies &copy; 2016 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/tether.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Location Master View</title>
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	
+}
+</style>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD5S4p1X2ItBi2COzuPMC1NQbopFWmESAE"></script>
+<script type="text/javascript">
+var geocoder = new google.maps.Geocoder();
+
+function geocodePosition(pos) {
+  geocoder.geocode({
+    latLng: pos
+  });
+}
+
+function initialize() {
+  var latLng = new google.maps.LatLng(18.521, 73.860);
+  var map = new google.maps.Map(document.getElementById('mapCanvas'), {
+    zoom: 10,
+    center: latLng,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+  });
+  var marker = new google.maps.Marker({
+    position: latLng,
+    title: 'Point A',
+    map: map,
+    draggable: false
+  });
+
+  // Update current position info.
+  updateMarkerPosition(latLng);
+  geocodePosition(latLng);
+
+ }
+
+// Onload handler to fire off the app.
+google.maps.event.addDomListener(window, 'load', initialize);
+ </script>
+</head>
+<body>
+<table width="100%" height="114%" valign="top" border="0" align="left" cellpadding="0" cellspacing="0" class="altrowstable" >
+  <tbody>
+      <tr>
+      <td width="100%" height="602"  align="left" valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" align="left" cellpadding="5" cellspacing="0" class="entrydatas"> 
+          <tbody>
+            <tr height="18">
+              <th width="12%" height="42"  align="left" valign="bottom" bgcolor="#C4C5C5"> <input name="button" type="button" class="button" id="button" value="Add Location" onClick="location.href='location_master_entry.html'"> </th>
+              <th width="11%" height="42" align="left" valign="bottom" bgcolor="#C4C5C5"><input name="button2" type="button" class="button" id="button2" value="Show Location"  onClick="location.href='location_master_show.html'"> </th>
+              <th width="77%" height="42" align="left" valign="bottom" bgcolor="#C4C5C5"><input name="button3" type="button" class="button" id="button3" value="Manage Location" onClick="location.href='location_manage_entry.html'"></th>
+            </tr>
+            <tr>
+              <td height="549" colspan="3" align="left" valign="top"><div id="mapCanvas" class="mapCanvas"></div></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+  <tbody>  
+</table>
+
+</body>
+</html>-->

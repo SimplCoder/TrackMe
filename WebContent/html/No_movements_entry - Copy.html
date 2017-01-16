@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from kalkisoft.com/adhata/html/new-vehicle.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Dec 2016 18:17:01 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NST GPS</title>
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link href="css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+	<link href="css/bootstrap-timepicker.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+</head>
+
+<body class="top-navigation" onload="getDropdown()">
+    <div id="wrapper">
+        <div class="navbar-fixed-top">
+            <div class="row">
+                <div class="col-xs-3 col-sm-3">
+                    <a href="#" class="logo-img">
+                        <img src="img/logo.png" alt="" /></a>
+                </div>
+                <div class="col-xs-6 col-sm-6 text-center">
+                    <div class="top-title">VEHICLE TRACKING AND FLEET MANAGMENT SYSTEM</div>
+                </div>
+                <div class="col-xs-3 col-sm-3 text-right">
+                    <div class="cust-logo">
+                        <img src="images/cust-logo.jpg" alt="" />
+                        <span>Customer Logo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom white-bgx">
+                <div class="col-xs-12">
+                    <nav class="navbar navbar-static-top" role="navigation">
+                        <div class="navbar-header">
+                            <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button"><i class="fa fa-reorder"></i></button>
+                        </div>
+                        <div class="navbar-collapse collapse" id="navbar">
+                            <ul class="nav navbar-nav">
+                                <li><a aria-expanded="false" role="button" href="index.html">Live</a> </li>
+                                <li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle">Vehicle Information<span class="caret"></span></a>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="vehicle-view.html"><i class="fa fa-eye"></i>Vehicle View</a></li>
+                                        <li><a href="vehicle-map-view.html"><i class="fa fa-map-marker"></i>Vehicle Map View</a></li>
+                                        <li><a href="vihicle-information.html"><i class="fa fa-info-circle"></i>Vehicle information </a></li>
+                                        <li><a href="#"><i class="fa fa-list"></i>Vehicle I/O List</a></li>
+                                    </ul>
+                                </li>
+                                <li><a aria-expanded="false" role="button" href="reports.html">Reports</a> </li>
+                                <li class="dropdown active"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle">Settings<span class="caret"></span></a>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="driver-scheduling.html"><i class="fa fa-wheelchair"></i>Driver Scheduling </a></li>
+                                        <li><a href="vehicle-service.html"><i class="fa fa-car"></i>Vehicle Service </a></li>
+                                        <li><a href="#"><i class="fa fa-th"></i>Geofency</a></li>
+                                        <li class="active"><a href="fuel.html"><i class="fa fa-bus"></i>Fuel </a></li>
+                                        <li><a href="location-entry.html"><i class="fa fa-location-arrow"></i>Location Entry </a></li>
+                                        <li><a href="route.html"><i class="fa fa-random"></i>Route </a></li>
+                                        <li><a href="route-schedule.html"><i class="fa fa-line-chart"></i>Route Scheduling </a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle">Configuration<span class="caret"></span></a>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="vehicle-master.html"><i class="fa fa-empire"></i>Vehicle Master</a></li>
+                                        <li><a href="driver-details.html"><i class="fa fa-pencil-square"></i>Driver Details</a></li>
+                                        <li><a href="vehicle-groups.html"><i class="fa fa-taxi"></i>Vehicle Groups</a></li>
+                                        <li><a href="alert_master_view.html"><i class="fa fa-certificate"></i>Alert</a></li>
+                                        <li><a href="user.html"><i class="fa fa-user"></i>User</a></li>
+                                        <li><a href="no-movement.html"><i class="fa fa-dot-circle-o"></i>No Movement </a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle">School<span class="caret"></span></a>
+                                    <ul role="menu" class="dropdown-menu">
+                                        <li><a href="student-entry.html"><i class="fa fa-child"></i>Student Entry </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-top-links navbar-right">
+                                <li><span class="cust-name">Welcome to Customer Name</span></li>
+                                <li><a href="login.html"><i class="fa fa-sign-out"></i>Log out </a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div id="page-wrapper2" class="gray-bg">
+            <div class="rowx wrapper border-bottom white-bg page-heading">
+                <div class="col-sm-12">
+                    <h2>No Movement Entry </h2>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content  animated fadeInRight">
+                <div class="ibox-content">
+                    <h3 class="m-t-none m-b">New No Movement Entry</h3>
+                    <div class="row">
+ <form action="http://166.62.56.246:8080/TrackMeWeb/TrackMeServlet" method="post">
+ <table width="729" height="462" border="1" cellpadding="0" cellspacing="0" class="entrydata" >
+  <tbody>
+    <tr>
+      <td width="727" height="268" align="center" valign="top" scope="col"><table width="722" border="0" align="center" cellpadding="0" cellspacing="0" >
+        <tbody>
+          <tr>
+            <td width="722" height="22" colspan="2" align="left" valign="middle" bgcolor="#cccccc" scope="col">No Movement Entry </td>
+            </tr>
+          <tr>
+            <td height="370" colspan="2" valign="top" bgcolor="#FFFFFF">
+            <table  border-color="#ffffff" width="100%" height="68%" border="1" cellpadding="0" cellspacing="0" class="entrydata" id="entrydata">
+              <tbody>
+                <tr>
+                  <td width="705" height="366" valign="top" scope="col">
+                  <p>
+                   <label for="textfield"  > Select  :</label>
+                    <input type="radio" name="select" id="select" value="vehicle" checked>
+                    Vehicle No
+                    <input type="radio" name="select" id="select" value="group">
+                    <label for="radio2">Group</label>
+                  </p>
+                    <p>
+                      <label for="textfield"  >Vehicle/Group:</label>
+                      <select name="vehicle" id="vehicle"><option value="Select">Select </option></select>
+                    </p>
+                    <p>
+                      <label for="date"  >Start Date:</label>
+                      <input type="date" name="startDate" id="startDate">
+                    </p>
+                    <p>
+                      <label for="date2"  >End Date:</label>
+                      <input type="date" name="endDate" id="endDate">
+                    </p>
+                    <p>
+                      <label for="time"  >Start Time:</label>
+                      <input type="time" name="startTime" id="startTime">
+                    </p>
+                    <p>
+                      <label for="time2"   >End Time:</label>
+                      <input type="time" name="endTime" id="endTime">
+                    </p>
+                    <p>
+                      <label for="select"  >Snooze Time :</label>
+                      <select name="select" id="select">
+                      </select>
+                    </p>
+                    <p>
+                    <label  >Repeat On :</label>
+                      <input type="checkbox" name="monday" id="monday" style="text-align:center; vertical-align: middle;">
+                      <label for="checkbox">Mon </label>
+                      <input type="checkbox" name="tuesday" id="tuesday" style="text-align:center; vertical-align: middle;" >
+                      <label for="checkbox2" > Tue </lable>
+                      <input type="checkbox" name="wednesday" id="wednesday" style="text-align:center; vertical-align: middle;">
+                      <label for="checkbox3">Wed </lable>
+                        <input type="checkbox" name="thursday" id="thursday" style="text-align:center; vertical-align: middle;">
+                       <label for="checkbox4"> Thu 
+                        <input type="checkbox" name="friday" id="friday" style="text-align:center; vertical-align: middle;">
+                        <label for="checkbox5">Fri 
+                        <input type="checkbox" name="saturday" id="saturday" style="text-align:center; vertical-align: middle;">
+                        <label for="checkbox6">Sat 
+                        <input type="checkbox" name="sunday" id="sunday" style="text-align:center; vertical-align: middle;">
+                        <label for="checkbox7">Sun </label> </p>
+                    <p> <lable for "checkbox"  > Alart Type : </lable>
+                      <input type="checkbox" name="sms" id="sms" value="true">
+                      <label for="checkbox8">SMS </label>
+                      <input type="checkbox" name="email" id="email" value="true">
+                      <label for="checkbox9">Email</label>
+                    </p>
+                   
+                    </td>
+                  </tr>
+                </tbody>
+            </table></td>
+          </tr>
+          </tbody>
+      </table> <br>
+      </td>
+    </tr>
+    <tr> <td height="47" align="center" valign="middle" bgcolor="#999999">
+        <input name="action" type="submit" class="button" id="button" value="Add Movement">
+        <input name="button3" type="button" class="button" id="button3" onClick="location.href='No_movements_view.html'" value="Exit">
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</form>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-fixed">
+            <div class="auto-reloader-bar">
+                <div class="row">
+                    <div class="col-xs-6">
+                        
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <div class="copy-txt"><strong>Copyright</strong> Neha Software Technologies &copy; 2016 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="js/tether.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="js/buttons.flash.min.js"></script>
+<script type="text/javascript" src="js/jspdf.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="js/icheck.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$('#entrydata').DataTable({
+			dom: 'Bfrtip',
+			buttons: [
+						'copyHtml5',
+						'excelHtml5',
+						'csvHtml5',
+						'pdfHtml5'
+					]
+		});
+		if($("input[type='search']").length>0){
+			$("input[type='search']").addClass("form-control");
+		}
+		if($("select[name='entrydata_length']").length>0){
+			$("select[name='entrydata_length']").addClass("form-control");
+		}
+		$('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+	});
+	var xmlHttpRequest = new XMLHttpRequest();
+	function getDropdown()
+	{
+		xmlHttpRequest.open("get", "/TrackMeWeb/TrackMeServlet?action=getVehicles", true);
+		xmlHttpRequest.onreadystatechange = createDropdown;
+		xmlHttpRequest.send(null);
+	}
+	function createDropdown()
+	{
+
+		if(xmlHttpRequest.readyState == 4 && xmlHttpRequest.status == 200)
+		{
+			var dom = (new DOMParser()).parseFromString(xmlHttpRequest.responseText, "text/xml");
+			var data = dom.getElementsByTagName("vehicle");
+			var i=0;
+			var select = document.getElementById("vehicle");
+			while( i < data.length )
+				{
+					var option = document.createElement('option');
+					option.value = data[i].childNodes[0].firstChild.nodeValue;
+					option.text = data[i].childNodes[0].firstChild.nodeValue;
+					
+					select.add(option);
+					i++;
+				}
+		}
+	}
+        
+</script>
+</html>
