@@ -42,7 +42,7 @@
 				  </div>
 				  <div class="navbar-collapse collapse" id="navbar">
 					<ul class="nav navbar-nav">
-					  <li > <a aria-expanded="false" role="button" href="../index.html">Live</a> </li>
+					  <li > <a aria-expanded="false" role="button"  href="Live">Live</a> </li>
 					  <li class="dropdown active"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle">Vehicle Information<span class="caret"></span></a>
 						<ul  role="menu" class="dropdown-menu">
 						  <li class="active"><a href="VehicleView.html"><i class="fa fa-eye"></i> Vehicle View</a></li>
@@ -78,6 +78,9 @@
 						  <li><a href="student_master_view.html"> <i class="fa fa-child"></i> Student Entry </a></li>
 						</ul>
 					  </li>
+					  <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Help</a>
+						
+					  </li>
 					</ul>
 					<ul class="nav navbar-top-links navbar-right">
 					  <li><span class="cust-name">Welcome to Customer Name</span></li>
@@ -97,7 +100,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="text-right">
-                    <a href="Driver_master_entry.html" class="btn btn-primary">Add Driver</a>
+                    <a href="Driver_master_entry.html" style="width:150px !important" class="btn btn-primary">Add Driver</a>
                 </div>
             </div>
         </div>
@@ -179,14 +182,18 @@
 <script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
 <script type="text/javascript" src="js/icheck.min.js"></script>
+
 <script>
     $(document).ready(function () {
+	
+	
+	$(".dt-buttons").addClass("pull-right");
+					$("#entrydata_filter").addClass("pull-right");
         $('#entrydata').DataTable({
             dom: 'Bfrtip',
             buttons: [
-						'copyHtml5',
+						
 						'excelHtml5',
-						'csvHtml5',
 						'pdfHtml5'
             ]
         });
@@ -246,4 +253,43 @@
 
     }
 </script>
+<script>
+            $(document).ready(function () {
+			
+			$(".dt-buttons").addClass("pull-right");
+					$("#entrydata_filter").addClass("pull-left");
+					
+                
+            });
+			$( document ).ready(function() {
+    
+
+
+    $(".buttons-html5").removeClass("dt-button");
+    $(".buttons-html5").html("");
+    $(".buttons-pdf").addClass("fa-file-pdf-o");
+    $(".buttons-excel").addClass("fa-file-excel-o");
+        $(".fa-file-pdf-o").addClass(".buttons-pdf");
+            $(".fa-file-excel-o").addClass(".buttons-excel");
+        
+    
+$(".buttons-excel::before").css("font-size","23px !important");
+$(".buttons-excel::before").css("padding-left","17px !important");
+
+$(".buttons-pdf::before").css("font-size","23px !important");
+$(".buttons-pdf::before").css("padding-left","10px !important");
+
+$(".table-responsive").css("position","relative");
+
+$(".dt-buttons").css("position","absolute");
+$(".dt-buttons").css("left","21%");
+$(".dt-buttons").css("top","3px");
+$(".input-sm").css("height","25px");
+
+});
+
+        </script> 
+		
+		
+		
 </html>

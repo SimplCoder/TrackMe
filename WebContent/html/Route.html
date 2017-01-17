@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -83,6 +84,9 @@
 						  <li><a href="student_master_view.html"> <i class="fa fa-child"></i> Student Entry </a></li>
 						</ul>
 					  </li>
+					   <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Help</a>
+						
+					  </li>
 					</ul>
 					<ul class="nav navbar-top-links navbar-right">
 					  <li><span class="cust-name">Welcome to Customer Name</span></li>
@@ -102,7 +106,7 @@
                 <div class="col-sm-6">
                     <div class="text-right">
                         <a href="route_master_entry.html" target="frame1">
-                            <input name="button" type="button" class="btn btn-primary" id="button" value="Add Route" /></a>
+                            <input name="button" type="button" style="width:120px;" class="btn btn-primary" id="button" value="Add Route" /></a>
                     </div>
                 </div>
             </div>
@@ -182,9 +186,8 @@
             $('#entrydata').DataTable({
                 dom: 'Bfrtip',
                 buttons: [
-                            'copyHtml5',
+                            
                             'excelHtml5',
-                            'csvHtml5',
                             'pdfHtml5'
                 ]
             });
@@ -202,3 +205,11 @@
     </script>
 </body>
 </html>
+<script>
+            $(document).ready(function () {
+			
+			$(".dt-buttons").addClass("pull-right");
+					$("#entrydata_filter").addClass("pull-left");
+                
+            });
+        </script> 

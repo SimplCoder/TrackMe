@@ -447,6 +447,9 @@ select{
 .buttons-pdf:before{
 	font: normal normal normal 14px/1 FontAwesome;
 	content: "\f1c1";
+	font-size:23px;
+	padding-left:10px;
+	color:red;
 }
 
 .dt-button span{
@@ -456,11 +459,16 @@ select{
 .buttons-csv:before{
 	font: normal normal normal 14px/1 FontAwesome;
 	content: "\f15b";
+	font-size:23px;
+	padding-left:17px;
 }
 
 .buttons-excel:before{
 	font: normal normal normal 14px/1 FontAwesome;
 	content: "\f1c3";
+	font-size:23px;
+	padding-left:10px;
+	color:green;
 }
 
 .buttons-copy:before{

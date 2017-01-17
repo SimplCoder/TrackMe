@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -78,6 +79,9 @@
 						  <li><a href="student_master_view.html"> <i class="fa fa-child"></i> Student Entry </a></li>
 						</ul>
 					  </li>
+					   <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Help</a>
+						
+					  </li>
 					</ul>
 					<ul class="nav navbar-top-links navbar-right">
 					  <li><span class="cust-name">Welcome to Customer Name</span></li>
@@ -98,9 +102,9 @@
                 <div class="text-right">
                     <form>
                         <a href="Vehicle_master_addNew.html" target="frame1">
-                            <input name="button" type="button" class="btn btn-primary" id="button" value="New" /></a>
-                        <input type="button" name="button2" class="btn btn-info" id="button2" value="Delete" />
-                        <input type="button" name="button3" class="btn btn-danger" id="button3" value="Exit" />
+                            <input name="button" type="button" class="btn btn-primary col-sm-3 pull-right" id="button" style="width:145px" value="Add New Vehicle" /></a>
+                        <input type="button" name="button2" class="btn btn-info col-sm-3 pull-right" id="button2" value="Delete" />
+                        <input type="button" name="button3" class="btn btn-danger col-sm-3 pull-right" id="button3" value="Exit" />
                     </form>
                 </div>
             </div>
@@ -176,10 +180,9 @@
         $('#entrydata').DataTable({
             dom: 'Bfrtip',
             buttons: [
-						'copyHtml5',
-						'excelHtml5',
-						'csvHtml5',
-						'pdfHtml5'
+						
+						                            'excelHtml5',
+                            'pdfHtml5'
             ]
         });
         if ($("input[type='search']").length > 0) {
@@ -302,4 +305,12 @@
         }
     }
 </script>
+<script>
+            $(document).ready(function () {
+			
+			$(".dt-buttons").addClass("pull-right");
+					$("#entrydata_filter").addClass("pull-left");
+                
+            });
+        </script> 
 </html>

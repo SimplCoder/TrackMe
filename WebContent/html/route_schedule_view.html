@@ -179,6 +179,9 @@
 						  <li><a href="student_master_view.html"> <i class="fa fa-child"></i> Student Entry </a></li>
 						</ul>
 					  </li>
+					   <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Help</a>
+						
+					  </li>
 					</ul>
 					<ul class="nav navbar-top-links navbar-right">
 					  <li><span class="cust-name">Welcome to Customer Name</span></li>
@@ -198,7 +201,7 @@
                 <div class="col-sm-6">
                     <div class="text-right">
                         <a href="route_scheduling_entry.html" target="frame1">
-                            <input name="button" type="button" class="btn btn-primary" id="button" value="Add Schedule" /></a>
+                            <input name="button" style="width:150px" type="button" class="btn btn-primary" id="button" value="Add Schedule" /></a>
                     </div>
                 </div>
             </div>
@@ -277,9 +280,8 @@
             $('#entrydata').DataTable({
                 dom: 'Bfrtip',
                 buttons: [
-                            'copyHtml5',
+                            
                             'excelHtml5',
-                            'csvHtml5',
                             'pdfHtml5'
                 ]
             });
@@ -297,3 +299,11 @@
     </script>
 </body>
 </html>
+<script>
+            $(document).ready(function () {
+			
+			$(".dt-buttons").addClass("pull-right");
+					$("#entrydata_filter").addClass("pull-left");
+                
+            });
+        </script> 

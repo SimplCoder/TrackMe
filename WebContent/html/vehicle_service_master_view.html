@@ -75,6 +75,9 @@
 						  <li><a href="student_master_view.html"> <i class="fa fa-child"></i> Student Entry </a></li>
 						</ul>
 					  </li>
+					   <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Help</a>
+						
+					  </li>
 					</ul>
 					<ul class="nav navbar-top-links navbar-right">
 					  <li><span class="cust-name">Welcome to Customer Name</span></li>
@@ -94,10 +97,12 @@
             <div class="col-sm-6">
                 <div class="text-right">
                     <form>
-                    <input name="button" type="button" class="btn btn-primary" id="button" value="New" onclick="location.href = 'vehicle_service_entry.html'" />
-                    <input name="button4" type="button" class="btn btn-info" id="button4" value="Modify" />
+                    <input name="button" type="button" class="btn btn-primary col-sm-3 pull-right" id="button" value="Add New Vehicle" onclick="location.href = 'vehicle_service_entry.html'" />
+
+				<!--  <input name="button4" type="button" class="btn btn-info" id="button4" value="Delete" />
                     <input name="button2" type="button" class="btn btn-danger" id="button2" value="Delete" />
                     <input name="button3" type="button" class="btn btn-danger" id="button3" value="Exit" onclick="location.href = 'vehicle_service_master_view.html'" />
+                    -->
                     </form>
                 </div>
             </div>
@@ -354,9 +359,8 @@
         $('#entrydata').DataTable({
             dom: 'Bfrtip',
             buttons: [
-						'copyHtml5',
+					
 						'excelHtml5',
-						'csvHtml5',
 						'pdfHtml5'
             ]
         });
@@ -373,4 +377,12 @@
     });
 
 </script>
+<script>
+            $(document).ready(function () {
+			
+			$(".dt-buttons").addClass("pull-right");
+					$("#entrydata_filter").addClass("pull-left");
+                
+            });
+        </script> 
 </html>

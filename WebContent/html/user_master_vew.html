@@ -84,6 +84,9 @@
 						  <li><a href="student_master_view.html"> <i class="fa fa-child"></i> Student Entry </a></li>
 						</ul>
 					  </li>
+					   <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Help</a>
+						
+					  </li>
 					</ul>
 					<ul class="nav navbar-top-links navbar-right">
 					  <li><span class="cust-name">Welcome to Customer Name</span></li>
@@ -109,7 +112,7 @@
                                 <div class="ibox float-e-margins">
                                     <div class="ibox-content">
                                         <div class="text-right">
-                                            <a href="user_master_entry.html" target="frame1" class="btn btn-primary">Add User</a>
+                                            <a href="User_master_entry.html" target="frame1" style="width:120px" class="btn btn-primary">Add User</a>
                                         </div>
                                         <div class="table-responsive">
                                             <table class="entrydata table table-striped table-bordered new-tbl" id="entrydata">
@@ -166,9 +169,8 @@
             $('#entrydata').DataTable({
                 dom: 'Bfrtip',
                 buttons: [
-                            'copyHtml5',
+                          
                             'excelHtml5',
-                            'csvHtml5',
                             'pdfHtml5'
                 ]
             });
@@ -247,3 +249,11 @@
 
 <!-- Mirrored from kalkisoft.com/adhata/html/user.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 30 Dec 2016 18:16:58 GMT -->
 </html>
+<script>
+            $(document).ready(function () {
+			
+			$(".dt-buttons").addClass("pull-right");
+					$("#entrydata_filter").addClass("pull-left");
+                
+            });
+        </script> 

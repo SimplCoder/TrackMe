@@ -78,6 +78,9 @@
 						  <li><a href="student_master_view.html"> <i class="fa fa-child"></i> Student Entry </a></li>
 						</ul>
 					  </li>
+					   <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Help</a>
+						
+					  </li>
 					</ul>
 					<ul class="nav navbar-top-links navbar-right">
 					  <li><span class="cust-name">Welcome to Customer Name</span></li>
@@ -97,9 +100,10 @@
                     <div class="text-right">
                         <form>
                             <a href="driver_scheduling_entry.html" target="frame1">
-                                <input name="button" type="button" id="button" value="New" class="btn btn-primary" /></a>
-                            <input type="button" name="button2" id="button2" value="Delete" class="btn btn-danger" />
-                            <input type="button" name="button3" id="button3" value="Exit" class="btn btn-warning" />
+                                <input name="button" type="button" id="button" value="New" class="btn btn-primary col-sm-3 pull-right" /></a>
+                         <input type="button" name="button2" id="button2" value="Delete" class="btn btn-danger col-sm-3 pull-right" />
+                            <input type="button" name="button3" id="button3" value="Exit" class="btn btn-warning col-sm-3 pull-right" />
+							
                         </form>
                     </div>
                 </div>
@@ -227,9 +231,8 @@
             $('#entrydata').DataTable({
                 dom: 'Bfrtip',
                 buttons: [
-                            'copyHtml5',
+                            
                             'excelHtml5',
-                            'csvHtml5',
                             'pdfHtml5'
                 ]
             });
@@ -251,7 +254,14 @@
 
 
 
-
+<script>
+            $(document).ready(function () {
+			
+			$(".dt-buttons").addClass("pull-right");
+					$("#entrydata_filter").addClass("pull-left");
+                
+            });
+        </script> 
 
 
 

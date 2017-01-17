@@ -78,6 +78,9 @@
 						  <li class="active"><a href="student_master_view.html"> <i class="fa fa-child"></i> Student Entry </a></li>
 						</ul>
 					  </li>
+					   <li class="dropdown"> <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" >Help</a>
+						
+					  </li>
 					</ul>
 					<ul class="nav navbar-top-links navbar-right">
 					  <li><span class="cust-name">Welcome to Customer Name</span></li>
@@ -96,10 +99,10 @@
             </div>
             <div class="col-sm-6">
                 <div style="text-align: right" class="space-20">
-                    <input type="button" name="button5" class="btn btn-primary" id="button6" value="New" onclick="location.href = 'school_master_entry.html'" />
-                    <input type="button" name="button5" class="btn btn-success" id="button1" value="Modify" />
-                    <input type="button" name="button5" class="btn btn-warning" id="button7" value="Delete" />
-                    <input type="button" name="button5" class="btn btn-danger" id="button8" value="Exit" onclick="location.href = 'VehicleView.html'" />
+                    <input type="button" name="button5" class="btn btn-primary col-sm-3 pull-right" id="button6" value="New" onclick="location.href = 'school_master_entry.html'" />
+                    <input type="button" name="button5" class="btn btn-success col-sm-3 pull-right"  id="button1" value="Modify" />
+                    <input type="button" name="button5" class="btn btn-warning col-sm-3 pull-right" id="button7" value="Delete" />
+                    <input type="button" name="button5" class="btn btn-danger col-sm-3 pull-right	" id="button8" value="Exit" onclick="location.href = 'VehicleView.html'" />
                 </div>
             </div>
         </div>
@@ -197,9 +200,8 @@
         $('#entrydata').DataTable({
             dom: 'Bfrtip',
             buttons: [
-						'copyHtml5',
+						
 						'excelHtml5',
-						'csvHtml5',
 						'pdfHtml5'
             ]
         });
@@ -217,3 +219,11 @@
 
 </script>
 </html>
+<script>
+            $(document).ready(function () {
+			
+			$(".dt-buttons").addClass("pull-right");
+					$("#entrydata_filter").addClass("pull-left");
+                
+            });
+        </script> 
